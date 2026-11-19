@@ -23,6 +23,7 @@
 \usepackage{tikz}
 \usepackage{etoolbox}
 \usepackage{listings}
+\usepackage{multicol}
 
 \usetheme{UAH}
 \usecolortheme{UAH}
@@ -98,8 +99,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Comment/Uncomment these lines for an automatically generated outline.
 {\disableNavigation{white}
-    \begin{frame}{Outline}
-        \tableofcontents
+    \begin{frame}[shrink]{Outline}
+	    \begin{multicols}{2}
+        	\tableofcontents
+ 	    \end{multicols}
     \end{frame}
 }
 
@@ -217,16 +220,17 @@ Enter text, charts, pictures, … here
 \subsection{UAH logos}
 \begin{frame}{Figures}{UAH logos}
  \centering
-  \begin{tabular}{cc}
-	  \includegraphics[height=0.1\textheight]{Images/vA_azul_LogoPrincipal.png} \medskip &
-    	  \includegraphics[height=0.1\textheight]{Images/vD_azul_LogoSecundario.png} \\
-	  \includegraphics[height=0.15\textheight]{Images/vC_azul_LogoSecundario.png} \medskip &
-    \includegraphics[height=0.15\textheight]{Images/vB_azul_LogoSecundario.png} \\
+  \begin{tabular}{|c|c|} \hline
+	  \includegraphics[height=0.1\textheight]{Images/vA_azul_LogoPrincipal.png} &
+    	  \includegraphics[height=0.1\textheight]{Images/vD_azul_LogoSecundario.png} \\ \hline
+	  \includegraphics[height=0.15\textheight]{Images/vC_azul_LogoSecundario.png} &
+    \includegraphics[height=0.15\textheight]{Images/vB_azul_LogoSecundario.png} \\ \hline
+	  \includegraphics[height=0.2\textheight]{Images/escudo_azul.png} &
+    \includegraphics[height=0.15\textheight]{Images/logo-combinado-dto-automatica-azul.png} \\ \hline
   \end{tabular}
 
     \bigskip
 
-    \includegraphics[height=0.2\textheight]{Images/escudo_azul.png} 
 \end{frame}
 
 
