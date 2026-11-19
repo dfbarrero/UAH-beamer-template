@@ -5,4 +5,11 @@ Este repositorio contiene una plantilla no oficial siguiendo las directrices sob
 La plantilla está escrita tanto en LaTeX como en RMarkdown.  Puedes ver un [ejemplo aquí](https://github.com/dfbarrero/UAH-beamer-template/main.pdf).
 
 ## Compilación
-La plantilla utiliza la fuente corporativa de la UAH, por lo que no se debe compilar con pdflatex. Utilizar xelatex o lualatex como procesadores de LaTeX.
+La plantilla utiliza la fuente corporativa de la UAH, por lo que no se debe compilar con pdflatex. Utilizar xelatex o lualatex como procesadores de LaTeX. Por otra parte, se utiliza el paquete minted, que requiere la execución externa de órdenes, debe compilarse con la opción -shell-escape activada. La orden básica para compilar la plantilla es la siguiente:
+ Por otra parte, se utiliza el paquete minted, que requiere la execución externa de órdenes, debe compilarse con la opción -shell-escape activada. La orden básica para compilar la plantilla es la siguiente:
+
+```
+xelatex -shell-escape main
+```
+
+No obstante se recomienda compilar con el Makefile que viene en el repositorio.
