@@ -29,6 +29,13 @@
 \setbeamertemplate{navigation symbols}{} 
 \setbeamertemplate{caption}[numbered]
 
+% Soporte para resaltado de sintaxis chula
+\usepackage{minted} 
+\setminted{fontsize=\footnotesize,breaklines,linenos,highlightcolor=grisUAH}
+\newcommand{\python}[2][\footnotesize]{\mintinline[fontsize=#1]{python}{#2}}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Presentation Info
 \title[Your Short Title]{Main Title}
@@ -206,6 +213,23 @@ Enter text, charts, pictures, … here
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{UAH logos}
+\begin{frame}{Figures}{UAH logos}
+ \centering
+  \begin{tabular}{cc}
+	  \includegraphics[height=0.1\textheight]{Images/vA_azul_LogoPrincipal.png} \medskip &
+    	  \includegraphics[height=0.1\textheight]{Images/vD_azul_LogoSecundario.png} \\
+	  \includegraphics[height=0.15\textheight]{Images/vC_azul_LogoSecundario.png} \medskip &
+    \includegraphics[height=0.15\textheight]{Images/vB_azul_LogoSecundario.png} \\
+  \end{tabular}
+
+    \bigskip
+
+    \includegraphics[height=0.2\textheight]{Images/escudo_azul.png} 
+\end{frame}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Chart}
@@ -284,6 +308,7 @@ Some examples of commonly used commands and features are included, to help you g
 
 \end{frame}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Some \LaTeX{} Examples}
 \subsection{Tables}
@@ -316,6 +341,26 @@ Gadgets & 13
 		    \lstinputlisting[language=C]{code/hello.c}
     \end{columns}
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Source code - minted}
+
+\begin{frame}{Source code - minted}
+    \begin{columns}
+ 	   \column{.50\textwidth}
+	        \begin{block}{Python}
+	        \vspace{-0.2cm}
+		\inputminted[highlightlines={5-6}]{python}{code/hello.py}
+            	\end{block}
+ 	   \column{.50\textwidth}
+		    \inputminted[highlightlines={3,5}]{C}{code/hello.c}
+    \end{columns}
+
+    \bigskip
+
+    This \python{setup()} is an inline Python statement
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Mathematics}
